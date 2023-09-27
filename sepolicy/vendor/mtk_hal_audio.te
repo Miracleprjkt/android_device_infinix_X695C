@@ -1,1 +1,6 @@
 allow mtk_hal_audio persist_data_file:dir { search };
+
+# Dolby
+binder_call(mtk_hal_audio, hal_dms_default)
+allow mtk_hal_audio hal_dms_hwservice:hwservice_manager find;
+binder_call(hal_dms_default, mtk_hal_audio)
