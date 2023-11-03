@@ -25,7 +25,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := rosemary,secret,maltose
+TARGET_OTA_ASSERT_DEVICE := rosemary,rosemary_p,secret,secretr,maltose
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := rosemary
