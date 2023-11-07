@@ -62,6 +62,11 @@ ro.hardware.vulkan=mali
 ro.vendor.mtk_aal_support=1
 ro.vendor.mtk_ultra_dimming_support=1
 
+# Dolby
+ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1 
+vendor.audio.dolby.ds2.enabled=true
+vendor.audio.dolby.ds2.hardbypass=true
+
 # DRM
 drm.service.enabled=true
 ro.vendor.mtk_widevine_drm_l1_support=1
