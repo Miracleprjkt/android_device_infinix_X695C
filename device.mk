@@ -462,6 +462,7 @@ PRODUCT_COPY_FILES += \
 
 # TetherOffload
 PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0.vendor \
     android.hardware.tetheroffload.control@1.1.vendor
 
 # Text classifier
