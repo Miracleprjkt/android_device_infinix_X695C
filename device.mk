@@ -175,7 +175,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
+    android.hardware.biometrics.fingerprint@2.3-service.infinix
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -310,12 +310,12 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayRosemary \
-    FrameworksResOverlayRosemary \
-    SystemUIOverlayRosemary \
-    TelephonyOverlayRosemary \
-    TetheringConfigOverlayRosemary \
-    WifiOverlayRosemary
+    CarrierConfigOverlayX695C \
+    FrameworksResOverlayX695C \
+    SystemUIOverlayX695C \
+    TelephonyOverlayX695C \
+    TetheringConfigOverlayX695C \
+    WifiOverlayX695C
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage \
@@ -429,11 +429,11 @@ PRODUCT_COPY_FILES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.rosemary
+    android.hardware.light-service.X695C
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.1-service.xiaomi-multihal \
+    android.hardware.sensors@2.1-service.infinix-multihal \
     android.frameworks.sensorservice@1.0.vendor \
     libsensorndkbridge
 
@@ -447,7 +447,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
-    hardware/xiaomi
+    hardware/infinix
 
 # SoundTrigger
 PRODUCT_PACKAGES += \
@@ -486,7 +486,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libkeystore-wifi-hidl \
     libkeystore-engine-wifi-hidl \
-    android.hardware.wifi@1.0-service-lazy.rosemary \
+    android.hardware.wifi@1.0-service-lazy.X695C \
     wpa_supplicant \
     hostapd
 
@@ -501,7 +501,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.rosemary
+    android.hardware.vibrator-service.X695C
 
 # VNDK 32 libs
 PRODUCT_COPY_FILES += \
@@ -510,4 +510,4 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-core/libcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcrypto-v32.so
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/rosemary/rosemary-vendor.mk)
+$(call inherit-product, vendor/infinix/X695C/X695C-vendor.mk)

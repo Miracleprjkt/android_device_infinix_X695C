@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/rosemary
+DEVICE_PATH := device/infinix/X695C
 
 # Architecture
 TARGET_ARCH := arm64
@@ -25,10 +25,10 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := rosemary,rosemary_p,secret,secretr,maltose
+TARGET_OTA_ASSERT_DEVICE := X695C,X695C_p,secret,secretr,maltose
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := rosemary
+TARGET_BOOTLOADER_BOARD_NAME := X695C
 TARGET_NO_BOOTLOADER := true
 
 # Build hacks
@@ -45,14 +45,14 @@ ODM_MANIFEST_SKUS += nfc
 ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/vintf/manifest_nfc.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_rosemary
-TARGET_RECOVERY_DEVICE_MODULES := init_rosemary
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_X695C
+TARGET_RECOVERY_DEVICE_MODULES := init_X695C
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x07c08000
 BOARD_KERNEL_TAGS_OFFSET := 0x0bc08000
@@ -62,8 +62,8 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := rosemary_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/rosemary
+TARGET_KERNEL_CONFIG := X695C_defconfig
+TARGET_KERNEL_SOURCE := kernel/infinix/X695C
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -170,7 +170,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/vintf/framework_com
 BOARD_VNDK_VERSION := current
 
 # Inherit the proprietary files
-include vendor/xiaomi/rosemary/BoardConfigVendor.mk
+include vendor/infinix/X695C/BoardConfigVendor.mk
 
 # Wifi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
@@ -181,4 +181,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
 # Firmware
-include vendor/xiaomi/rosemary-firmware/BoardConfigVendor.mk
+include vendor/infinix/X695C-firmware/BoardConfigVendor.mk

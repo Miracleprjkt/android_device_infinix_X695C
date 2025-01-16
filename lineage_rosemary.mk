@@ -11,18 +11,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit from rosemary device
-$(call inherit-product, device/xiaomi/rosemary/device.mk)
+# Inherit from X695C device
+$(call inherit-product, device/xiaomi/X695C/device.mk)
 
-PRODUCT_DEVICE := rosemary
-PRODUCT_NAME := lineage_rosemary
-PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi Note 10S
-PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_DEVICE := X695C
+PRODUCT_NAME := lineage_X695C
+PRODUCT_BRAND := Infinix
+PRODUCT_MODEL := Infinix X695C
+PRODUCT_MANUFACTURER := infinix
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+PRODUCT_GMS_CLIENTID_BASE := android-infiniux
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="rosemary-user 12 SP1A.210812.016 V13.0.5.0.SFFTWXM release-keys"
+    PRIVATE_BUILD_DESC="vnd_x695_h854-user 11 RP1A.200720.011 156472 release-keys"
 
-BUILD_FINGERPRINT := Redmi/rosemary/rosemary:12/SP1A.210812.016/V13.0.5.0.SFFTWXM:user/release-keys
+BUILD_FINGERPRINT := Infinix/X695C-GL/Infinix-X695C:11/RP1A.200720.011/221114V356:user/release-keys
