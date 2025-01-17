@@ -14,6 +14,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from X695C device
 $(call inherit-product, device/xiaomi/X695C/device.mk)
 
+#EPPE
+TARGET_DISABLE_EPPE := true
+
 PRODUCT_DEVICE := X695C
 PRODUCT_NAME := lineage_X695C
 PRODUCT_BRAND := Infinix
